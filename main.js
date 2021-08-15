@@ -114,15 +114,18 @@ function depositMoney(id, amount) {
 // console.log(depositMoney(2,2000000));
 
 /////////////////////////////////////////////
-
+let blacklist = [];
 function BlockedClients (id){
 
-    let blacklist = [];
-    if (tzagaysBank.id == id){
-
-        blacklist.push([i],1)
+    for (let i = 0; i < tzagaysBank.length; i++) {
+      if (tzagaysBank[i].id == id){
+        blacklist.push(tzagaysBank[i]);
         return blacklist
+      
     }
+  
 }
-console.log(BlockedClients(2));
+}
+console.log(BlockedClients(3));
+console.log(tzagaysBank);
 
